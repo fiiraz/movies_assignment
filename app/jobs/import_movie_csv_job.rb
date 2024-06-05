@@ -23,7 +23,6 @@ class ImportMovieCsvJob < ApplicationJob
       end
     end
 
-    # Create movie entries in the database
     Movie.transaction do
       movies_data.each do |title, data|
         Movie.create!(
